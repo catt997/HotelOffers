@@ -24,7 +24,7 @@ Hello <b><%=email%></b>
 
 <input type="text" placeholder="Search" onkeyup="search(this.value)">
 </p>
-<%--<input type="button" id="delete" value="Delete all" onClick="deleteAll()" />--%>
+<%--<input type="button" id="delete" value="Delete all" onClick="deleteAll()" /> NU AM NEVOIE DE BUTON DE DELETE--%>
 
 <div id="listOfToDo">
     <table border="1">

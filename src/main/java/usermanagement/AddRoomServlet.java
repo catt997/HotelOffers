@@ -13,7 +13,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 @WebServlet("/addRoom")
-public class AddFoodServlet extends HttpServlet {
+public class AddRoomServlet extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) {

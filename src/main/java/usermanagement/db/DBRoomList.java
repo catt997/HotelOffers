@@ -56,7 +56,7 @@ public class DBRoomList {
         return isInserted;
     }
 
-    public List<RoomList> getFoodList (int idUser, String search) {
+    public List<RoomList> getRoomList(int idUser, String search) {
 
         RoomList mfl =null;
         List<RoomList> list = new ArrayList<>();
@@ -71,7 +71,7 @@ public class DBRoomList {
 
             // 2. fac un query pe o tabela , intai creez obiectul
 
-            PreparedStatement pSt = conn.prepareStatement("select * from myfoodlist where iduser=? and foodname like CONCAT( '%',?,'%') ORDER BY fooddate desc");
+            PreparedStatement pSt = conn.prepareStatement("select * from myrooms where iduser=? and roomtype like CONCAT( '%',?,'%') ORDER BY datein desc");
 
             pSt.setInt(1, idUser);
             pSt.setString(2, search);
@@ -84,9 +84,9 @@ public class DBRoomList {
 
                 mfl = new RoomList();
                 mfl.setId(rs.getInt("id"));
-                mfl.setRoomType(rs.getString("foodname"));
+                mfl.setRoomType(rs.getString("roomtype"));
 
-                Date dateFromDB = rs.getDate("fooddate");
+                Date dateFromDB = rs.getDate("datein");
                 LocalDate localDate = dateFromDB.toLocalDate();
                 mfl.setDateIn(localDate);
 
@@ -109,21 +109,7 @@ public class DBRoomList {
 
         DBRoomList db = new DBRoomList();
 
-//       MyFoodList m0 = new MyFoodList("pizza", LocalDate.now(), 48 );
-//
-//        MyFoodList m1 = new MyFoodList("cartofi cu ceapa ", LocalDate.now(), 48 );
-//        MyFoodList m2 = new MyFoodList("peste cu morcovi", LocalDate.now(), 48 );
-//        MyFoodList m3 = new MyFoodList("inghetata de vanilie", LocalDate.now(), 48 );
-//        MyFoodList m4 = new MyFoodList("fructe de mare", LocalDate.now(), 48 );
-//
-//
-//        db.newFood(m0);
-//        db.newFood(m1);
-//        db.newFood(m2);
-//        db.newFood(m3);
-//        db.newFood(m4);
-
-        List<RoomList> l = db.getFoodList(48,"");
+        List<RoomList> l = db.getRoomList(1,"");
 
         for(int i = 0;i<l.size();i++) {
 

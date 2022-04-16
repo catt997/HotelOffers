@@ -30,7 +30,7 @@ public class RoomList {
     private LocalDate dateOut;
     private int iduser;
 
-    public RoomList(String roomType, LocalDate dateIn, int iduser) {
+    public RoomList(String roomType, LocalDate dateIn, LocalDate dateOut, int iduser) {
         this.roomType = roomType;
         this.dateIn = dateIn;
         this.dateOut = dateOut;

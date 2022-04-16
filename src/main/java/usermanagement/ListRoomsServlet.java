@@ -12,8 +12,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-@WebServlet("/listfood")
-public class ListFoodServlet extends HttpServlet {
+@WebServlet("/listrooms")
+public class ListRoomsServlet extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) {
@@ -30,7 +30,7 @@ public class ListFoodServlet extends HttpServlet {
                 search="";
 
             DBRoomList db = new DBRoomList();
-            List<RoomList> l = db.getFoodList(iduser, search);
+            List<RoomList> l = db.getRoomList(iduser, search);
             JSONObject json = new JSONObject();
             json.put("listFromBackend", l);
             String result = json.toString();

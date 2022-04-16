@@ -12,7 +12,7 @@ function newToDo() {
 
 function loadToDo() {
     $.ajax({
-        url: 'listfood'
+        url: 'listroom'
     }).done(function (response) {
       //  printOnDiv(response.listFromBackend);
           display(response.listFromBackend);
@@ -41,7 +41,7 @@ function display (lista) {
 }
 
 function search(myText) {
-    $.ajax("listfood", {
+    $.ajax("listroom", {
         cache: false,
         dataType: "json",
         data: {
