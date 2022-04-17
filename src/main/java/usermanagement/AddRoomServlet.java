@@ -25,15 +25,14 @@ public class AddRoomServlet extends HttpServlet {
 
 
         String roomType = req.getParameter("roomType");
-
-        String dateIN = req.getParameter("dateIn");
+        String dateIn = req.getParameter("dateIn");
         String dateOut = req.getParameter("dateOut");
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         //convert String to LocalDate
-        LocalDate lDateIn = LocalDate.parse(dateIN, formatter);
-        LocalDate lDateOut = LocalDate.parse(dateIN, formatter);
+        LocalDate lDateIn = LocalDate.parse(dateIn, formatter);
+        LocalDate lDateOut = LocalDate.parse(dateOut, formatter);
 
         if(o!=null )
         {

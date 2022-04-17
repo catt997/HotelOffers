@@ -7,6 +7,16 @@ public class RoomList {
     private int id ;
     private String roomType;
 
+    public float getPricePerNight() {
+        return pricePerNight;
+    }
+
+    public void setPricePerNight(float pricePerNight) {
+        this.pricePerNight = pricePerNight;
+    }
+
+    private float pricePerNight;
+
     @Override
     public String toString() {
         return "MyRooms{" +
@@ -14,6 +24,7 @@ public class RoomList {
                 ", roomType='" + roomType + '\'' +
                 ", roomDateIn=" + dateIn +
                 ", roomDateOut=" + dateOut +
+                ", pricePerNight=" + pricePerNight +
                 ", iduser=" + iduser +
                 '}';
     }
@@ -30,11 +41,12 @@ public class RoomList {
     private LocalDate dateOut;
     private int iduser;
 
-    public RoomList(String roomType, LocalDate dateIn, LocalDate dateOut, int iduser) {
+    public RoomList(String roomType, LocalDate dateIn, LocalDate dateOut, float pricePerNight, int iduser) {
         this.roomType = roomType;
         this.dateIn = dateIn;
         this.dateOut = dateOut;
         this.iduser = iduser;
+        this.pricePerNight = pricePerNight;
     }
 
     public RoomList() {
@@ -70,4 +82,5 @@ public class RoomList {
     public void setDateOut (LocalDate dateIn) {
         this.dateOut = dateOut;
     }
+
 }

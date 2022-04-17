@@ -30,9 +30,9 @@ public class ListRoomsServlet extends HttpServlet {
                 search="";
 
             DBRoomList db = new DBRoomList();
-            List<RoomList> l = db.getRoomList(iduser, search);
+            List<RoomList> listroom = db.getRoomList(iduser, search);
             JSONObject json = new JSONObject();
-            json.put("listFromBackend", l);
+            json.put("listFromBackend", listroom);  //face un ob de tip json si afiseaza myrooms din DB
             String result = json.toString();
             returnJsonResponse(resp, result);
         }

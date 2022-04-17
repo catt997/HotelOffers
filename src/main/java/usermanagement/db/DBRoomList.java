@@ -26,7 +26,7 @@ public class DBRoomList {
             Connection conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
 
             // 2. creez un prepared ststement si il populez cu date
-            PreparedStatement pSt = conn.prepareStatement("INSERT INTO myreservations (roomType,dateIn, dateOut, price, iduser) VALUES(?,?,?.?,?)");
+            PreparedStatement pSt = conn.prepareStatement("INSERT INTO myrooms (roomType,dateIn, dateOut, pricepernight, iduser) VALUES(?,?,?,?,?)");
             pSt.setString(1,u.getRoomType());
 
             Date date = Date.valueOf(u.getStartDate());
@@ -86,9 +86,16 @@ public class DBRoomList {
                 mfl.setId(rs.getInt("id"));
                 mfl.setRoomType(rs.getString("roomtype"));
 
-                Date dateFromDB = rs.getDate("datein");
-                LocalDate localDate = dateFromDB.toLocalDate();
-                mfl.setDateIn(localDate);
+                Date dateInFromDB = rs.getDate("datein");
+                LocalDate localDateIn = dateInFromDB.toLocalDate();
+
+                Date dateOutFromDB = rs.getDate("dateout");
+                LocalDate localDateOut = dateOutFromDB.toLocalDate();
+
+
+                mfl.setPricePerNight(rs.getInt("pricepernight"));
+                mfl.setDateIn(localDateIn);
+                mfl.setDateOut(localDateOut);
 
                 list.add(mfl);
 

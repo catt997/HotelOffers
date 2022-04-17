@@ -22,7 +22,7 @@
 Hello <b><%=email%></b>
 </p>
 
-<input type="text" placeholder="Search" onkeyup="search(this.value)">
+<%--<input type="text" placeholder="Search" onkeyup="search(this.value)">
 </p>
 <%--<input type="button" id="delete" value="Delete all" onClick="deleteAll()" /> NU AM NEVOIE DE BUTON DE DELETE--%>
 
@@ -34,7 +34,7 @@ Hello <b><%=email%></b>
             <th>RoomType</th>
             <th>Date IN</th>
             <th>Date OUT</th>
-    <th>Price per night </th>
+            <th>Price per night </th>
         </tr>
         </thead>
         <tbody id="obiect">
@@ -57,7 +57,7 @@ Hello <b><%=email%></b>
 <input type="text" id="dateOut" placeholder="date out" />
 
 
-<input type="button" id="add" value="New" onClick="newToDo()" />
+<input type="button" id="add" value="Add Request" onClick="newToDo()" />
 
 </p>
 <a href ="logout.jsp">Logout</a>

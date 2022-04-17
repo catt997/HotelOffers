@@ -12,7 +12,7 @@ function newToDo() {
 
 function loadToDo() {
     $.ajax({
-        url: 'listroom'
+        url: 'listrooms'
     }).done(function (response) {
       //  printOnDiv(response.listFromBackend);
           display(response.listFromBackend);
@@ -34,7 +34,7 @@ function display (lista) {
             "<td>" + obiect.roomType +"</td>" +
             "<td>" + obiect.dateIn + "</td>" +
             "<td>" + obiect.dateOut + "</td>" +
-            // "<td> <a href='neverforget?action=delete&id="+obiect.id+"'>x</a></td>" +
+            "<td>" + obiect.pricePerNight + "</td>" +
             "</tr>";
     });
     $("#obiect").html(randuri);
