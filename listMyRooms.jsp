@@ -19,31 +19,24 @@
     }
 %>
 
-Hello <b><%=email%></b>
+Welcome <b><%=email%></b> !
+</p>
+<br> Grand Hotel is situated in the Old City Center of Bucharest and offers 10 rooms with King size beds.</p>
+    Please fill in the below fields whether you prefer DOUBLE or SINGLE room, the check-in date and check-out date.</br>
+    Kindly be informed that by pressing the "New Request" button, your request is registered in our system and
+    one of our dedicated sales agent will contact you.</p>
+    The room availability and price and total amount is communicated by the sales agent.</br>
+    <br> <i> Our members benefit of discounts on different occasions and special tariffs!</i> </br>
+    <br> <i> English Breakfast is included in the room price. </i> </br>
+    <br> <i> If you are travelling alone and request a SINGLE room, we are offering airport transfer in the price of a double room.  </i> </br>
+-----pot sa pun un tabel orientativ cu pretul pe weekend si etc
+</p>
+
 </p>
 
 <%--<input type="text" placeholder="Search" onkeyup="search(this.value)">
 </p>
 <%--<input type="button" id="delete" value="Delete all" onClick="deleteAll()" /> NU AM NEVOIE DE BUTON DE DELETE--%>
-
-<div id="listOfToDo">
-    <table border="1">
-        <thead>
-        <tr>
-<%--            <th onclick="sorteazaNume(this)">Obiect &dArr;</th>--%>
-            <th>RoomType</th>
-            <th>Date IN</th>
-            <th>Date OUT</th>
-            <th>Price per night </th>
-        </tr>
-        </thead>
-        <tbody id="obiect">
-
-        </tbody>
-
-
-    </table>
-</div>
 
 <script>
     loadToDo();
@@ -60,8 +53,33 @@ Hello <b><%=email%></b>
 <input type="button" id="add" value="Add Request" onClick="newToDo()" />
 
 </p>
+<p><strong> Below you can view all registered requests: </strong></p>
+</p>
+<br>
+
+<div id="listOfToDo">
+    <table border="1">
+        <thead>
+        <tr>
+            <%--            <th onclick="sorteazaNume(this)">Obiect &dArr;</th>--%>
+            <th>RoomType</th>
+            <th>Date IN</th>
+            <th>Date OUT</th>
+            <th>Price per night </th>
+        </tr>
+        </thead>
+        <tbody id="obiect">
+
+        </tbody>
+
+
+    </table>
+</div>
+
+
+
+</p>
 <a href ="logout.jsp">Logout</a>
 
-<%--<a href ="http://localhost:8080/labLoginRegisterAndItems_war_exploded/userManagement?action=OUT">Logout</a>--%>
 </body>
 </html>
