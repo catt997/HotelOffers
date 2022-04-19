@@ -71,7 +71,7 @@ public class DBRoomList {
 
             // 2. fac un query pe o tabela , intai creez obiectul
 
-            PreparedStatement pSt = conn.prepareStatement("select * from myrooms where iduser=? and roomtype like CONCAT( '%',?,'%') ORDER BY datein desc");
+            PreparedStatement pSt = conn.prepareStatement("select * from myrooms where iduser=? and roomtype like CONCAT( '%',?,'%') ORDER BY iduser asc");
 
             pSt.setInt(1, idUser);
             pSt.setString(2, search);

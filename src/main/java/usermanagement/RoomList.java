@@ -69,17 +69,17 @@ public class RoomList {
     }
 
     public LocalDate getDateOut() {
-        return dateIn;
+        return dateOut;
     }
 
     public void setDateIn(LocalDate dateIn) {
         this.dateIn = dateIn;
     }
     public LocalDate getDateIn() {
-        return dateOut;
+        return dateIn;
     }
 
-    public void setDateOut (LocalDate dateIn) {
+    public void setDateOut (LocalDate dateOut) {
         this.dateOut = dateOut;
     }
 

@@ -21,7 +21,8 @@ public class AddRoomServlet extends HttpServlet {
         HttpSession s = req.getSession();
         Object o = s.getAttribute("id"); // daca pe sesiune exista obiectul numit id sau nu exista voi lua diferite decizii
 
-        float price = 200;
+        float priceDouble = 200;
+        float priceSingle = 150;
 
 
         String roomType = req.getParameter("roomType");
@@ -37,6 +38,12 @@ public class AddRoomServlet extends HttpServlet {
         if(o!=null )
         {
             int iduser = (int)o;
+
+            float price = 0;
+            if ("double".equalsIgnoreCase(roomType))
+                price = priceDouble;
+            if ("single".equalsIgnoreCase(roomType))
+            price = priceSingle;
 
             MyRooms mfl = new MyRooms(roomType, lDateIn, lDateOut, price , iduser);
             DBRoomList db = new DBRoomList();

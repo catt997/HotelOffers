@@ -24,7 +24,7 @@ Welcome <b><%=email%></b> !
 <br> Grand Hotel is situated in the Old City Center of Bucharest and offers 10 rooms with King size beds.</p>
     Please fill in the below fields whether you prefer DOUBLE or SINGLE room, the check-in date and check-out date.</br>
     Kindly be informed that by pressing the "New Request" button, your request is registered in our system and
-    one of our dedicated sales agent will contact you.</p>
+    one of our dedicated sales agents will contact you.</p>
     The room availability and price and total amount is communicated by the sales agent.</br>
     <br> <i> Our members benefit of discounts on different occasions and special tariffs!</i> </br>
     <br> <i> English Breakfast is included in the room price. </i> </br>
@@ -59,7 +59,6 @@ Welcome <b><%=email%></b> !
     <table border="1">
         <thead>
         <tr>
-            <%--            <th onclick="sorteazaNume(this)">Obiect &dArr;</th>--%>
             <th>RoomType</th>
             <th>Date IN</th>
             <th>Date OUT</th>
