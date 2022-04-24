@@ -39,7 +39,7 @@ public class UserManagementServlet extends HttpServlet {
             {
                 error(resp, "There is an error while trying to create this user, please try again!");
             }
-            // daca l-a creat cu succes du-te la login , altfel ramai aici
+            // daca l-a creat cu success du-te la login , altfel ramai aici
 
         } else if (action != null && action.equalsIgnoreCase("LOGIN")) {
             //afisare
@@ -105,8 +105,6 @@ public class UserManagementServlet extends HttpServlet {
             error(resp, "you must accept terms and conditions");
             return false;
         }
-
-
 
         boolean accept=false;
         boolean offer=false;

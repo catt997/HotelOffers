@@ -71,9 +71,9 @@ Welcome <b><%=email%></b> !
 
     </table>
 </div>
-
-
-
+</p>
+<br> <i> All the offer requests from above are now registered!</i> </br>
+<br> <i> Please note that these are not confirmed reservations, you will be contacted by us for your final reservation! </i>
 </p>
 <a href ="logout.jsp">Logout</a>
 
