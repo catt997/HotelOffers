@@ -28,8 +28,7 @@ Welcome <b><%=email%></b> !
     The room availability and price and total amount is communicated by the sales agent.</br>
     <br> <i> Our members benefit of discounts on different occasions and special tariffs!</i> </br>
     <br> <i> English Breakfast is included in the room price. </i> </br>
-    <br> <i> If you are travelling alone and request a SINGLE room, we are offering airport transfer in the price of a double room.  </i> </br>
------pot sa pun un tabel orientativ cu pretul pe weekend si etc
+
 </p>
 
 </p>
